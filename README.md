@@ -1,1 +1,1 @@
-# frella
+# Criação do projeto app boticário
