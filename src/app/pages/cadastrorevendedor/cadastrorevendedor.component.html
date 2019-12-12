@@ -1,0 +1,60 @@
+<section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-8 col-xl-6 login-sec">
+                <form [formGroup]="cadastroRevendedorForm" (ngSubmit)="onSubmit()">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h2 class="text-center">Realize seu cadastro</h2>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col mt-4">
+
+                            <input type="text" class="form-control"
+                                [ngClass]="{'border-invalid' : cadastroRevendedorForm.controls.nome.invalid && this.submitted}"
+                                formControlName="nome" placeholder="Nome completo">
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-4">
+                        <div class="col">
+                            <input type="email" class="form-control"
+                                [ngClass]="{'border-invalid' : cadastroRevendedorForm.controls.cpf.invalid && this.submitted}"
+                                formControlName="cpf" placeholder="CPF">
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-4">
+                        <div class="col">
+                            <input type="email" class="form-control"
+                                [ngClass]="{'border-invalid' : cadastroRevendedorForm.controls.email.invalid && this.submitted}"
+                                formControlName="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-4">
+                        <div class="col">
+                            <input type="password" class="form-control"
+                                [ngClass]="{'border-invalid' : cadastroRevendedorForm.controls.senha.invalid && this.submitted}"
+                                formControlName="senha" placeholder="Password">
+                        </div>
+                        <div class="col">
+                            <input type="password" class="form-control"
+                                [ngClass]="{'border-invalid' : cadastroRevendedorForm.controls.csenha.invalid && this.submitted}"
+                                formControlName="csenha" placeholder="Confirm Password">
+                        </div>
+                    </div>
+                    <div class="row justify-content-start mt-4">
+                        <div class="col">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input">
+                                    Eu aceito o termo de condições
+                                </label>
+                            </div>
+                            <button class="btn btn-login float-right mt-4" type="submit">Cadastrar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

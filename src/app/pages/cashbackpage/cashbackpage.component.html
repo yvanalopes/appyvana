@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center login-sec" style="padding-bottom: 20px;">
+            <h2 class="text-center">Cashback</h2>
+        </div>
+        <div class="col-12 profile">
+            <div class="image">
+                <div class="circle-1"></div>
+                <div class="circle-2"></div>
+                <img [attr.src]="cashback.foto"/>
+            </div>
+            <div class="info">
+                <div>
+                    <p><span>{{cashback.nome}}</span></p>
+                    <p>{{cashback.email}}</p>
+                    <p>{{cashback.telefone}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 profile-resgatar">
+            <h1>{{cashback.valor}}</h1>
+            <button class="btn btn-login">Resgatar</button>
+        </div>
+    </div>
+</div>

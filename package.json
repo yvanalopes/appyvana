@@ -25,6 +25,7 @@
     "font-awesome": "^4.7.0",
     "http-server": "^0.12.0",
     "jquery": "^3.4.1",
+    "ngx-mask": "^8.1.6",
     "popper.js": "^1.16.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",

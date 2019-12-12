@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center login-sec">
+            <h2 class="text-center">Lista de Compras</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Código da Compra</th>
+                        <th>Valor</th>
+                        <th>Data</th>
+                        <th>Cashback</th>
+                        <th>% de Cashback</th>
+                        <th>Status</th>
+                        <th>Opções</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let compra of listaCompras; let i = index">
+                        <td>{{compra.codigo}}</td>
+                        <td>{{compra.valor}}</td>
+                        <td>{{compra.data | date:'dd/mm/yyyy'}}</td>
+                        <td>{{compra.cashback}}</td>
+                        <td>{{compra.percentageCashback}}</td>
+                        <td [ngClass]="compra.status">{{compra.status | statusPipe}}</td>
+                        <td>
+                            <div class="table-options">
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button style="top:5px;" type="button" *ngIf="compra.status == 'emValidacao'" (click)="editar(i)" class="btn btn-secondary"><img src="assets/images/edit-icon.svg"/></button>
+                                    <button style="transform: scale(0.9);" type="button" *ngIf="compra.status == 'emValidacao'" (click)="excluir(i)" class="btn btn-secondary"><img src="assets/images/delete-icon.svg"/></button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
